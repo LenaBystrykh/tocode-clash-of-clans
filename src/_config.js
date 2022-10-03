@@ -1,6 +1,6 @@
 export const app = {
-    title: "template"
-};
+    title: "Clash of clans"
+}
 
 export const links = [
     {
@@ -12,10 +12,5 @@ export const links = [
         title: "about",
         alias: "about",
         url: "/about"
-    },
-    {
-        title: "vacancy",
-        alias: "vacancy",
-        url: "/vacancy"
     }
-];
+]
