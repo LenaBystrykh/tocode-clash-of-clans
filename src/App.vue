@@ -3,7 +3,7 @@
     <!-- здесь :links - это название пропа, то, что укажется уже в MyHeader.vue в пропсах -->
     <!-- а ="links" - это название объекта из даты(ниже), который мы передаем хэдеру -->
     <!-- <MyHeader :title="title" :links="links"/> -->
-    <MyHeader />
+    <Header />
     <div class="wrapper-content">
       <div class="container">
         <!-- <p>hello</p> -->
@@ -11,15 +11,15 @@
       </div>
     </div>
     <!-- <MyFooter :links="links" /> -->
-    <MyFooter />
+    <Footer />
   </div>
 </template>
 
 <script>
-import MyHeader from '@/components/MyHeader';
-import MyFooter from '@/components/MyFooter';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 export default {
-    components: {MyHeader, MyFooter},
+    components: {Header, Footer},
     data() {
         return {
         };

@@ -3,9 +3,11 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // если можно настраивать сервер, то можно и createWebHistory юзать
 const routerHistory = createWebHashHistory();
 
-import HomePage from "../src/pages/HomePage"
-import AboutPage from "../src/pages/AboutPage"
+import HomePage from "../src/pages/Home"
+import AboutPage from "../src/pages/About"
 import NotFound from "../src/pages/NotFound"
+import Item from "../src/pages/Item"
+import items from "./seeders/items";
 
 const routes = createRouter({
     history: routerHistory,
@@ -21,8 +23,18 @@ const routes = createRouter({
             component: AboutPage
         },
         {
-            // path: '/:PathMatch(.*)*',
-            path: '/:CatchAll(.*)',
+            path: "/:itemAlias",
+            name: "itemAlias",
+            component: Item,
+            beforeEnter(to) {
+                if (!(items.find((item) => item.alias == to.params.itemAlias))) {
+                    return {name: "404"}
+                }
+            }
+        },
+        {
+            path: '/:PathMatch(.*)*',
+            // path: '/:CatchAll(.*)',
             name: "404",
             component: NotFound
         }

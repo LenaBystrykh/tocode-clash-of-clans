@@ -4,11 +4,14 @@
         <ul>
             <li>Full template customization on Vue CLI</li>
             <li>Installing and configuring Vue-router for Vue.js 3</li>
-            <li>Dynamic update without  reloading the page</li>
+            <li>Dynamic update without reloading the page</li>
             <li>Dynamic navbar and links</li>
             <li>Handle non-existent routes</li>
             <li>Hashes for router</li>
             <li>General config setting</li>
+            <li>Using slots</li>
+            <li>Using seeders with images(require)</li>
+            <li>Carousel(slider) from vue3-carousel</li>
         </ul>
     </div>
 </template>
